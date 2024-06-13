@@ -66,8 +66,8 @@ async def _batch(event):
                 return conv.cancel()
             try:
                 value = int(_range.text)
-                if value > 100:
-                    await conv.send_message("100 hi kad sk bitu")
+                if value > 1000:
+                    await conv.send_message("1000 hi kad sk bitu")
                     return conv.cancel()
             except ValueError:
                 await conv.send_message("Range must be an integer!")
@@ -84,7 +84,7 @@ async def run_batch(userbot, client, sender, link, _range):
             timer = 5
         if i < 50 and i > 25:
             timer = 10
-        if i < 100 and i > 50:
+        if i < 1000 and i > 50:
             timer = 15
         if not 't.me/c/' in link:
             if i < 25:
